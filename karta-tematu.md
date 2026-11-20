@@ -53,7 +53,6 @@ Wstępne założenia:
 - Python 3
 - pandas
 - scikit-learn
-- aplikacja dostarczona w postaci obrazu kontenerowego 
 ```
 
 ## 8. Kryterium sukcesu (obowiązkowe)
@@ -64,13 +63,37 @@ Wstępne założenia:
     - zawsze najczęstsza klasa: ok. 50%, bo po wyrównaniu w danych jest tyle samo recenzji pozytywnych co negatywnych,
 	- prosta lista słów kluczowych: ręcznie spisane polskie słowa pozytywne („świetny”, „znakomity”…) i negatywne („nuda”, „rozczarowanie”…) razem z ich najczęstszymi odmianami („świetny”, „świetna”, „świetne”). System liczy, których słów jest w recenzji więcej, i według tego przypisuje etykietę. Przy remisie wybiera najczęstszą klasę. Listę piszemy, zanim zajrzymy do części testowej.
 
-Do tego przegląd co najmniej 20 recenzji, przy których system się pomylił, z próbą wyjaśnienia dlaczego (np. zaprzeczenia „wcale nie jest zły”, ironia, recenzje mieszane).
-
 ## 9. Zakres minimalny (obowiązkowe)
+```
+1. Pozyskanie i przygotowanie danych
+- Pobranie surowego zbioru danych z recenzjami filmowymi.
+- Konwersja i normalizacja danych do formatu CSV.
+- Wybór wymaganych kolumn (review, sentiment).
+- Usunięcie duplikatów.
+- Usunięcie pustych i niepoprawnych recenzji.
+- Uwzględnienie wyłącznie recenzji pozytywnych (2) i negatywnych (0) do treningowego datasetu.
+- Zbalansowanie zbioru danych – taka sama liczba recenzji pozytywnych i negatywnych.
+- Podział zbioru na:
+  - 75% – zbiór treningowy (Training Dataset).
+  - 25% – zbiór walidacyjny (Validation Dataset).
+- Wyodrębnienie recenzji nieoznaczonych (-1) do zbioru demonstracyjnego (Demo Dataset).
+- Eksport przygotowanych zbiorów do osobnych podkatalogów i plików CSV.
 
-> TODO
->
-> Co powstanie na pewno. To jest obietnica, z której będziecie rozliczeni.
+2. Przygotowanie prototypu
+- Przygotowanie środowiska w Google Colab.
+- Wczytanie zbioru danych.
+- Przygotowanie reprezentacji cech (Feature).
+- Przygotowanie etykiet klas (Labels).
+- Implementacja procesu wektoryzacji tekstu przy użyciu TF-IDF.
+- Implementacja procesu treningowego.
+- Test różnych algorytmów.
+- Przygotowanie pierwszego prototypu klasyfikatora sentymentu.
+- Weryfikacja poprawności procesu uczenia i predykcji na datasecie walidacyjnym.
+
+3. Dostarczenie działającej aplikacji
+
+4. Porównanie z wcześniej zapisanymi krytariami sukcesu.
+```
 
 ## 10. Zakres opcjonalny
 
@@ -88,7 +111,7 @@ Link: https://github.com/gilberthelwich/ml-sentiment-analysis-project
 
 **Ryzyko 1: przeciek danych.** Jeśli ta sama recenzja trafi do części uczącej i testowej, wynik będzie fałszywie dobry. _Plan:_ podział na część uczącą i testową ustalamy raz i więcej go nie zmieniamy.
 
-**Ryzyko 2: własny model nie działa poprawnie** i daje wynik dużo gorszy niż gotowy model z biblioteki. _Plan:_ najpierw sprawdzamy go na kilku prostych recenzjach, przy których sami wiemy, jaki powinien być wynik. Potem porównujemy go z gotowym modelem ze scikit-learn na tych samych danych.
+**Ryzyko 2: własny model nie działa poprawnie** _Plan:_ najpierw sprawdzamy jego działanie na próbce 25% danych z datasetu i porównujemy skuteczność do punktu odniesienia.
 
 **Ryzyko 3: inne teksty niż w opisie problemu.** W zbiorze są długie recenzje krytyków i blogerów, a recenzje użytkowników są zwykle krótsze. _Plan:_ opisujemy to w dokumentacji jako ograniczenie. Jeśli starczy czasu, sprawdzamy system na krótkich recenzjach.
 
