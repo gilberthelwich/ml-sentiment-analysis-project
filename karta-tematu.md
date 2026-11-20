@@ -111,7 +111,7 @@ Link: https://github.com/gilberthelwich/ml-sentiment-analysis-project
 
 **Ryzyko 1: przeciek danych.** Jeśli ta sama recenzja trafi do części uczącej i testowej, wynik będzie fałszywie dobry. _Plan:_ podział na część uczącą i testową ustalamy raz i więcej go nie zmieniamy.
 
-**Ryzyko 2: własny model nie działa poprawnie** _Plan:_ najpierw sprawdzamy jego działanie na próbce 25% danych z datasetu i porównujemy skuteczność do punktu odniesienia.
+**Ryzyko 2: własny model nie działa poprawnie** _Plan:_ najpierw sprawdzamy jego działanie na próbce 25% danych z datasetu i porównujemy skuteczność do punktu odniesienia. W razie potrzeby dostrajamy parametry.
 
 **Ryzyko 3: inne teksty niż w opisie problemu.** W zbiorze są długie recenzje krytyków i blogerów, a recenzje użytkowników są zwykle krótsze. _Plan:_ opisujemy to w dokumentacji jako ograniczenie. Jeśli starczy czasu, sprawdzamy system na krótkich recenzjach.
 
