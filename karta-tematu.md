@@ -79,7 +79,7 @@ Wstępne założenia:
 - Wyodrębnienie recenzji nieoznaczonych (-1) do zbioru demonstracyjnego (Demo Dataset).
 - Eksport przygotowanych zbiorów do osobnych podkatalogów i plików CSV.
 
-2. Przygotowanie prototypu
+2. Przygotowanie prototypu (/poc/prototype.ipynb)
 - Przygotowanie środowiska w Google Colab.
 - Wczytanie zbioru danych.
 - Przygotowanie reprezentacji cech (Feature).
@@ -90,7 +90,7 @@ Wstępne założenia:
 - Przygotowanie pierwszego prototypu klasyfikatora sentymentu.
 - Weryfikacja poprawności procesu uczenia i predykcji na datasecie walidacyjnym.
 
-3. Dostarczenie działającej aplikacji
+3. Dostarczenie działającej aplikacji (/app/)
 
 4. Porównanie z wcześniej zapisanymi krytariami sukcesu.
 ```
