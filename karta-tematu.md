@@ -41,8 +41,8 @@ Dlaczego ta technologia pasuje do tego problemu (2–3 zdania): Problem to klasy
 
 |||
 |---|---|
-| Źródło (link do konkretnego zbioru, nie do serwisu) | Filmweb+, Paweł Narolski, 2020. https://github.com/narolski/filmwebplus. Licencja MIT. |
-| Rozmiar i format | 27 202 recenzje filmowe po polsku z serwisów Filmweb, Film.org.pl, Kinoblog, FDB i blogfilmowy24, średnio ok. 514 słów na recenzję. Jeden plik CSV (tekst recenzji i etykieta), spakowany ok. 42 MB, po rozpakowaniu ok. 104 MB. Etykiety według oceny autora recenzji: nieoznaczone 7 710, negatywne 3 085, neutralne 9 436, pozytywne 6 971. Używamy tylko recenzji negatywnych (3 085) i pozytywnych (6 971). Po wyrównaniu liczby recenzji w obu grupach zostaje ok. 6 170 recenzji (3 085 + 3 085). |
+| Źródło (link do konkretnego zbioru, nie do serwisu) | https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews?resource=download |
+| Rozmiar i format | 49582 opinii, w tym 24698 negatywnych i 24698 pozytywnych (pół na pół). Opinie w języku angielskim o różnej długości (najkrótsza 6 słow, najdłuższa 2473 słów, a średnio 231 słów w tym 1287 znaki). W datasecie znajdują się znaczniki html, dlatego konieczne jest wstępne oczyszczenie.|
 | Czy dane są już dostępne? | tak |
 | Jeśli nie — plan pozyskania | --- |
 
